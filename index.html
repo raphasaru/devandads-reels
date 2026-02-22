@@ -156,6 +156,74 @@
             box-shadow: 0 20px 50px rgba(124, 58, 237, 0.6);
         }
         
+        .reels-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 60px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .cta-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: bounce 1s ease-in-out infinite alternate;
+        }
+        
+        .cta-text {
+            font-size: 36px;
+            font-weight: 600;
+            color: #a5b4fc;
+            text-align: center;
+        }
+        
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+        
+        .final-ctas {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 25px 35px;
+            min-width: 180px;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .cta-item:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        
+        .cta-item:nth-child(3) {
+            animation-delay: 1s;
+        }
+        
+        .cta-emoji {
+            font-size: 50px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .cta-label {
+            font-size: 24px;
+            font-weight: 600;
+            color: #c7d2fe;
+            text-align: center;
+        }
+        
         .footer {
             position: absolute;
             bottom: 60px;
@@ -195,7 +263,10 @@
         <div class="particles" id="particles1"></div>
         <h1 class="title float">Como 3 IAs criam<br>1 post do Instagram</h1>
         <p class="subtitle slide-in">Sistema multi-agente 100% automatizado</p>
-        <div class="cta-button pulse">Deslize para ver 👉</div>
+        <div class="reels-cta">
+            <div class="cta-icon">▶️</div>
+            <div class="cta-text">Assista até o final!</div>
+        </div>
     </div>
     
     <!-- Cena 2: John -->
@@ -246,9 +317,20 @@
             <p class="agent-desc">Conteúdo de qualidade publicado<br>automaticamente todos os dias</p>
         </div>
         
-        <button class="cta-button" onclick="window.location.href='https://instagram.com/dev.andads'">
-            SEGUIR @dev.andads 👆
-        </button>
+        <div class="final-ctas">
+            <div class="cta-item">
+                <span class="cta-emoji">💾</span>
+                <span class="cta-label">Salve este Reel!</span>
+            </div>
+            <div class="cta-item">
+                <span class="cta-emoji">📤</span>
+                <span class="cta-label">Compartilhe!</span>
+            </div>
+            <div class="cta-item">
+                <span class="cta-emoji">👆</span>
+                <span class="cta-label">Siga @dev.andads</span>
+            </div>
+        </div>
         
         <div class="footer">#IA #Automação #Tecnologia</div>
     </div>
